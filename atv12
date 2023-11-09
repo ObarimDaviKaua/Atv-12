@@ -1,1 +1,59 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define sucesso 0;
 
+void IntervaloFechadoEntreAeB(){
+    int a, b;
+    
+}
+
+
+int main()
+{
+    int escolha = 0;
+    while (1)
+    {
+        printf("Escolha uma opção:\n");
+        printf("1. Imprimir intervlo fechao entre a e b.\n");
+        printf("2. Contar linhas de um arquivo.\n");
+        printf("3. Ler números de um arquivo e imprimir na tela.\n");
+        printf("4. Escrever nome, endereço e matrícula do usuário em um arquivo.\n");
+        printf("5. Ler números inteiros e escrever em um arquivo binário.\n");
+        printf("6. Ler os dados do arquivo da Questão 4 e retornar um array.\n");
+        printf("7. Ler os números do arquivo da Questão 5 e retornar um array.\n");
+        printf("0. Sair.\n");
+        scanf("%d", &escolha);
+
+        switch (escolha)
+        {
+        case 1:           
+            IntervaloFechadoEntreAeB();
+            break;
+        case 2:
+            
+            break;
+        case 3:
+            
+            break;
+        case 4:
+            
+            break;
+        case 5:
+            
+            break;
+        case 6:
+            
+            break;
+        case 7:
+           
+            break;
+        case 0:
+            exit(0);
+        default:
+            printf("Opção inválida.\n");
+            exit(0);
+        }
+    }
+
+    return 0;
+}
