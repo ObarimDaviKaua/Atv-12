@@ -2,9 +2,93 @@
 #include <stdlib.h>
 #define sucesso 0;
 
+//Função Da Questão 1
+void imprimirIntervalo(int a, int b) {
+    if (a > b) {
+        printf("O valor de b deve ser maior que a.\n");
+    } else {
+        printf("%d \n", a);
+        if (a < b) {
+            imprimirIntervalo(a + 1, b);
+        }
+    }
+}
+
+//Questão 1
 void IntervaloFechadoEntreAeB(){
     int a, b;
+
     
+    printf("Diga o valor de a: ");
+    scanf("%d", &a);
+
+    printf("Diga o valor de b: ");
+    scanf("%d", &b);
+
+    
+    imprimirIntervalo(a, b);
+
+    return sucesso;
+}
+
+// Função Prar Calucular o elemento maximo Da Questão 2
+int encontrarMaximo(const int S[], int tamanho) {
+    if (tamanho == 1) {
+        return S[0];
+    } else {
+        int maximoRestante = encontrarMaximo(S, tamanho - 1);
+        return (S[tamanho - 1] > maximoRestante) ? S[tamanho - 1] : maximoRestante;
+    }
+}
+
+// Função recursiva para calcular a soma dos elementos Da Questão 2
+int calcularSoma(const int S[], int tamanho) {
+    if (tamanho == 1) {
+        return S[0];
+    } else {
+        return S[tamanho - 1] + calcularSoma(S, tamanho - 1);
+    }
+}
+
+// Função recursiva para calcular a média aritmética da Questão 2
+float calcularMedia(const int S[], int tamanho) {
+    if (tamanho == 1) {
+        return (float) S[0];
+    } else {
+        float somaRestante = calcularMedia(S, tamanho - 1) * (tamanho - 1);
+        return (somaRestante + S[tamanho - 1]) / tamanho;
+    }
+}
+
+void CaularVetorDeS(){
+
+    int sair = 1;
+
+    printf("Primeiro Iremos Criar o Vetor S\n");
+     
+    int *vetor = (int *)malloc(1 * sizeof(int));
+
+    for(sair == 1){
+
+        
+    }
+    
+
+    int tamanho = sizeof(vetor) / sizeof(vetor[0]);
+
+    // Encontrar o elemento máximo
+    int maximo = encontrarMaximo(vetor, tamanho);
+    printf("Elemento máximo: %d\n", maximo);
+
+    // Calcular a soma dos elementos
+    int soma = calcularSoma(vetor, tamanho);
+    printf("Soma dos elementos: %d\n", soma);
+
+    // Calcular a média aritmética
+    float media = calcularMedia(vetor, tamanho);
+    printf("Média aritmética: %.2f\n", media);
+
+    return sucesso;
 }
 
 
@@ -15,12 +99,12 @@ int main()
     {
         printf("Escolha uma opção:\n");
         printf("1. Imprimir intervlo fechao entre a e b.\n");
-        printf("2. Contar linhas de um arquivo.\n");
-        printf("3. Ler números de um arquivo e imprimir na tela.\n");
-        printf("4. Escrever nome, endereço e matrícula do usuário em um arquivo.\n");
-        printf("5. Ler números inteiros e escrever em um arquivo binário.\n");
-        printf("6. Ler os dados do arquivo da Questão 4 e retornar um array.\n");
-        printf("7. Ler os números do arquivo da Questão 5 e retornar um array.\n");
+        printf("2. .\n");
+        printf("3. .\n");
+        printf("4. .\n");
+        printf("5. .\n");
+        printf("6. .\n");
+        printf("7. .\n");
         printf("0. Sair.\n");
         scanf("%d", &escolha);
 
@@ -30,7 +114,7 @@ int main()
             IntervaloFechadoEntreAeB();
             break;
         case 2:
-            
+            CaularVetorDeS();
             break;
         case 3:
             
